@@ -1,0 +1,45 @@
+# due 6/05 - calculator app
+
+puts '>> enter first number:'
+num1 = gets.chomp
+
+puts '=> the first number is ' + num1
+
+puts '>> enter second number:'
+num2 = gets.chomp
+
+puts '=> the second number is ' + num2
+
+puts "=> first number is #{num1} and second number is #{num2}"
+
+puts "=> choose the type of calculator to use: 'M' (manual) ors 'R' (random)"
+type = gets.chomp
+
+if type == 'M' || type == 'm'
+  puts ">> indicate the operation you want to perform: 1) add 2) sub 3) mul 4) div"
+	operation = gets.chomp
+
+elsif type == 'R' || type == 'r'
+	operation = rand(1..4)
+
+else
+	puts "next time enter an 'M' or 'R' :P"
+end
+
+result = nil
+
+if operation == '1'
+	result = num1.to_i + num2.to_i
+	operation = 'add'
+elsif operation == '2'
+	result = num1.to_i - num2.to_i
+	operation = 'subtract'
+elsif operation == '3'
+	result = num1.to_i * num2.to_i
+	operation = 'multiply'
+else operation == '4'
+	result = num1.to_i / num2.to_i
+	operation = 'divided by'
+end
+
+	puts "=> #{num1} #{operation} #{num2} is #{result}"
