@@ -4,7 +4,7 @@
 
 # 10.5 A Few More Things to Try
 # Expanded english_number.
-
+=begin
 def english_number number
   if number < 0 # no neg #'s
 		return 'pls enter a # that is not negative'
@@ -117,6 +117,8 @@ num_at_start.downto(2) do |num|
 end
 puts "#{num_bot[1]} of beer on the wall, #{num_bot[1]} of beer!".capitalize
 puts "take one down, pass it around, no more bottles of beer on the wall!"
+=end
+
 
 # .. could ..
 =begin
