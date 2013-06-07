@@ -1,0 +1,140 @@
+# 1. Use the "each" method of Array to iterate over 
+#[1, 2, 3, 4, 5, 6, 7, 8, 9, 10], and print out each value.
+
+=begin
+arr = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+
+arr.each do |value|
+  #print value.to_s + ', '
+	puts value
+end
+=end
+
+#2. Same as above, but only print out values greater than 5.
+
+=begin
+arr = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+
+arr.each do |value|
+	if value > 5
+		puts value
+	end
+end
+=end
+
+#3. Now, using the same array from #2, use the "select" method to extract all odd numbers into a new array.
+
+=begin
+arr = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+
+new_arr = []
+
+new_arr << arr.select {|value| value%2 == 1 }
+
+print new_arr
+=end
+
+
+#4. Append "11" to the end of the array. Prepend "0" to the beginning.
+
+=begin
+arr = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+
+arr.concat([11])
+arr.unshift(0)
+print arr
+
+=end
+
+#5. Get rid of "11". And append a "3".
+
+=begin
+arr = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+
+arr.concat([11])
+arr.unshift(0)
+arr.pop
+arr.concat([3])
+
+print arr
+=end
+
+#6. Get rid of duplicates without specifically removing any one value. 
+
+=begin
+arr = [1, 2, 1, 3, 4, 3, 5, 6, 1, 7, 8, 9, 10]
+
+arr.uniq!
+
+print arr
+=end
+
+#7. What's the major difference between an Array and a Hash?
+
+# although both store collections of objects indexed by 
+# a key, an array uses an interger whereas a hash supports 
+# any object as a key.
+
+#8. Create a Hash using both Ruby 1.8 and 1.9 syntax.
+=begin
+	# 1.8
+	myhash18_1 = Hash["a", 100, "b", 200]
+	myhash18_2 = Hash["a" => 300, "b" => 400]
+	myhash18_3 = {"a"=> 500, "b" => 600}
+	puts myhash18_1
+	puts myhash18_2
+	puts myhash18_3
+
+	# 1.9
+	myhash19_1 = Hash["a", 100, "b", 200]
+	myhash19_2 = Hash["a" => 300, "b" => 400]
+	myhash19_3 = Hash[[["a", 400], ["b", 500]]]
+	puts myhash19_1
+	puts myhash19_2
+	puts myhash19_3
+=end
+
+#Suppose you have a h = {a:1, b:2, c:3, d:4}
+
+=begin
+h = {a:1, b:2, c:3, d:4}
+=end
+
+#9. Get the value of key "b".
+
+=begin
+puts h[:b]
+=end
+
+#10. Add to this hash the key:value pair {e:5}
+
+=begin
+h[:e] = 5
+
+puts h
+=end
+
+#13. Remove all key:value pairs whose value is less than 3.5
+
+=begin
+h.delete_if {|k,v| v < 3.5 }
+puts h
+=end
+
+#14. Can hash values be arrays? Can you have an array of hashes? 
+# (give examples)
+
+#> yes, hash values can be arrays and can have an array of hases
+=begin
+num = {"one"=>["a", "b", "c"], "two"=>["d", "e"]}
+=end
+
+#15. Look at several Rails/Ruby online API sources and say 
+# which one your like best and why.
+
+#> http://railsapi.com/ .. is fav bc it builds a custom set of docs
+# http://apidock.com/
+# http://www.gotapi.com/rubyrails
+# http://api.rubyonrails.org/
+# http://ruby-doc.org/
+# 
